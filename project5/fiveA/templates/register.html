@@ -1,0 +1,44 @@
+<!-- enrolment/templates/enrolment/register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Register Student</h1>
+    <form id="registration-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form>
+    <div id="message"></div>
+
+    <script>
+        $(document).ready(function() {
+            $('#registration-form').on('submit', function(event) {
+                event.preventDefault();
+                $.ajax({
+                    url: "{% url 'register_student' %}",
+                    type: "POST",
+                    data: $(this).serialize(),
+                    dataType: "json",
+                    success: function(response) {
+                        if (response.success) {
+                            $('#message').html('<p>Student registered successfully!</p>');
+                            $('#registration-form')[0].reset();
+                        } else {
+                            let errors = '';
+                            for (const [field, messages] of Object.entries(response.errors)) {
+                                errors += `<p>${field}: ${messages.join(', ')}</p>`;
+                            }
+                            $('#message').html(errors);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
