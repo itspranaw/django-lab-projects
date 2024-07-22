@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Website</title>
+        <style>
+            h1.heading {
+                text-align: left;
+                padding: 10px;
+            }
+            footer {
+                border-top: 1px solid black;
+                font-size: larger;
+            }
+            nav {
+                border-bottom: 1px solid black;
+            }
+            body {
+                background-color: lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 class="heading">My Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+        <footer>
+            <p>&copy; 2024- My Website - Ghansyam</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+bin/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.sqlite3
+db.sqlite3
+
+# If you're using Django's default settings:
+*.pyc
+__pycache__/
+*.db
+*.sqlite3
+
+# If you are using the coverage library
+htmlcov/
+.coverage
+.coverage.*
+
+# Django migrations
+**/migrations/
+
+# If you are using Jupyter notebooks
+.ipynb_checkpoints
+
+# Django static files and media files
+staticfiles/
+media/
+
+# VSCode configuration
+.vscode/
+
+# PyCharm configuration
+.idea/
+
+# Environments
+.env
+*.env
+
+# macOS specific
+.DS_Store

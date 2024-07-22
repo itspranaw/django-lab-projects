@@ -1,0 +1,2 @@
+For students enrollment developed in module 2, create a generic class 'view' which displays list of students and detailed view 
+that displays student details for any selected student in the list.

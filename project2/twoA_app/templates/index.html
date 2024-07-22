@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <body>
+            <ul>
+                {{fruits|unordered_list}}
+            </ul>
+            <ol>
+                {%for item in students%}
+                <li>
+                    {{item}}
+                </li>
+                {%endfor%}
+            </ol>
+        </body>
+    </head>
+</html>
